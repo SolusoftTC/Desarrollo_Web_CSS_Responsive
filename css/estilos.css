@@ -1,0 +1,233 @@
+body {
+  font-family: 'Dancing Script', cursive;
+  font-size: 18px;
+  background: #02010a;
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  box-shadow: 2px 2px 2px #02010a;
+}
+
+nav ul li{
+  display: inline;
+  list-style:none;
+  padding: 0px 15px 0px 5px;
+}
+
+a {
+  text-decoration: inline;
+  color: white;
+}
+header {
+  animation: slidein_abajo 2s;
+}
+.seleccion {
+  text-decoration: none;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #C6d5c5;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cabecera {
+  background-color: #5b7989;
+  /*
+  *  Nota: he validado que este comando border-top-left-radius sea soportado en todos los navegadores
+  *    https://caniuse.com/#search=border-top-left-radius | por eso no hago la compatbilidad -moz- | -webkit-
+  */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#titulo_inicio {
+  width: 60%;
+  color: white;
+  font-size: 36px;
+  text-shadow: 2px 2px #02010a;
+  padding: 10px;
+  text-align: left;
+}
+
+#nav_desktop {
+  width: 40%;
+  padding: 0px;
+  text-align: right;
+}
+
+#imagen_centrada {
+  width: 100%;
+  background: #82c3a6;
+  text-align: center;
+}
+
+#imagen_centrada img {
+  width: 70%;
+}
+
+#imagen_secundaria {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #d5c75f;
+  border: 1px solid black;
+}
+
+#imagen_secundaria img {
+  width: 90%;
+}
+
+#efecto1:hover {
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+#efecto1 {
+  transition: transform 1s;
+}
+
+#efecto2:hover {
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+#efecto2 {
+  transition: transform 1s;
+}
+
+.contenido {
+  margin: 0 auto;
+}
+
+.columna {
+  text-align: center;
+}
+
+.col_footer {
+  height: 200px;
+  padding: 10px;
+}
+
+.col_footer img {
+  box-shadow: none;
+  height: 18%;
+  vertical-align: middle;
+}
+
+
+#galeria {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid white;
+}
+
+.col_galeria {
+  text-align: center;
+  width: 33%;
+  flex: 1 1 auto;
+  padding: 10px;
+}
+
+.col_galeria img {
+  width: 95%;
+}
+
+.efecto_blur {
+  filter: blur(10px);
+}
+.escala_grises {
+  filter: grayscale(100%);
+}
+.sepia {
+  filter: sepia(90%);
+}
+
+@keyframes slidein_abajo {
+  0% {
+    margin-top: 150%;
+  }
+  50% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+
+/* Media Query para Desktop*/
+@media (min-width: 900px) {
+  .contenido {
+    width: 900px;
+  }
+  #imagen_secundaria {
+    flex-direction: row;
+  }
+  .columna {
+    width: 50%;
+  }
+  .col_footer {
+    width: 25%;
+  }
+}
+
+
+
+/* Media Query para Movil */
+@media (max-width: 900px) {
+  .contenido {
+    width: 100%;
+  }
+/*
+  width: 60%;
+  display:flex;
+  flex-flow: row wrap;*/
+
+  #titulo_inicio {
+    width: 100%;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 6px;
+    text-align: center;
+  }
+  #nav_desktop {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  #imagen_secundaria {
+    flex-direction: column;
+  }
+  .columna {
+    width: 100%;
+  }
+  .col_footer {
+    width: 100%;
+  }
+  .col_galeria {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*flex-direction: column;*/
+
+
+/*
+.sombra {
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+*/
